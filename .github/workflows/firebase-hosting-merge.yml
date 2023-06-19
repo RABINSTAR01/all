@@ -2,7 +2,7 @@
 # https://github.com/firebase/firebase-tools
 
 name: Deploy to Firebase Hosting on merge
-'on':
+on:
   push:
     branches:
       - main
@@ -18,3 +18,4 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DEFAULT_4FFE5 }}'
           channelId: live
           projectId: default-4ffe5
+      - run: node server.js
